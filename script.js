@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 	if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    $("#position").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
 
 		$.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&appid=c8476878f227b0e4f347c71b636cde01&units=imperial", function(json) {
 		$('#tempfield').html(json.main.temp);
@@ -20,11 +19,12 @@ $(document).ready(function(){
 				var toggleState = true;
 				$('#changeTemp').on("click", function() {
 				  if(toggleState) {
-				    $('#tempfield').html(Math.round((temp- 32) * (5/9)));
-						$('#changeTemp').html("Fahrenheit");
-				  } else {
-				    	$('#tempfield').html(Math.round(temp));
-							$('#changeTemp').html("Celsius");
+				    $('#tempfield').html(Math.round((temp - 32) * (5/9)));
+					$('#changeTemp').html("Fahrenheit");
+				  } 
+				  else {
+				    $('#tempfield').html(Math.round(temp));
+					$('#changeTemp').html("Celsius");
 				  }
 				  toggleState = !toggleState;
 				});			
