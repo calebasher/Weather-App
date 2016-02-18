@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>Weather App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row text-center">
+				<h1 id="city"></h1>
+		</div>
+		<div class="row">
+			<img  id="weatherIcon" style="-webkit-user-select:none; display:block; margin:auto;" src="">
+		</div>
+		<div id ="tempButton" class="row text-center">
+				<button id = "changeTemp" class = "btn btn-primary">Celsius</button>
+		</div>
+		<div class="row"> 
+			<div id="tempRow"class="col-md-3 col-md-offset-3 well text-center">
+				<h2>Temperature</h2>
+				<div id="tempfield"></div>
+			</div>	
+			<div id="weatherRow" class="col-md-3 well text-center">
+				<h2>Weather</h2>
+				<div id="weather"></div>
+			</div>
+		</div>
+	</div>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
